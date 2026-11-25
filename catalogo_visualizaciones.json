@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo": "Catálogo de visualizaciones de los 9 equipos",
-    "fecha_corte": "2026-11-24",
+    "fecha_corte": "2026-11-25",
     "responsable": "Data Visualization Team",
     "metodo": "Se clonó el repositorio de cada equipo en la fecha de corte y se registraron las gráficas, mapas y escenas 3D/AR que proponen: imágenes generadas, código de gráficas o gráficas descritas en sus README. Para cada una se revisó si los datos salen de un archivo del repositorio o si están escritos en el código, simulados o pendientes.",
     "estados": {
@@ -25,7 +25,7 @@
       "integrantes": "Rama, Diego, José Ángel",
       "repo": "https://github.com/joseeangel0/merida-ciudad-esponja",
       "sitio": "https://joseeangel0.github.io/merida-ciudad-esponja/",
-      "commit": "ba59494 · 2026-11-24",
+      "commit": "7434ee2 · 2026-11-24",
       "captura": "img/e1_sitio.png"
     },
     {
@@ -91,11 +91,11 @@
     {
       "n": 8,
       "proyecto": "Del tren a la calle",
-      "tema": "¿Qué cambió alrededor de 34 estaciones del Tren Maya? Negocios DENUE 2019 vs 2025.",
+      "tema": "¿Qué tan al alcance están las oportunidades alrededor del Tren Maya? Negocios 2019 vs 2025 en 34 estaciones y entorno urbano por AGEB en Mérida.",
       "integrantes": "Damian, Raúl, Ricardo",
       "repo": "https://github.com/ezraidenn/del-tren-a-la-calle",
       "sitio": null,
-      "commit": "34704f5 · 2026-11-24",
+      "commit": "31e34f4 · 2026-11-25",
       "captura": null
     },
     {
@@ -105,7 +105,7 @@
       "integrantes": "Aquino, Brad, Eliana",
       "repo": "https://github.com/BradRobles/M-rida-for-Sale",
       "sitio": null,
-      "commit": "613fe99 · 2026-11-24",
+      "commit": "e327292 · 2026-11-25",
       "captura": null
     }
   ],
@@ -228,6 +228,53 @@
     },
     {
       "eq": 1,
+      "id": "D6",
+      "titulo": "Lluvia y reportes de desagüe de calles inundadas",
+      "tipo": "Línea",
+      "metrica": "Lluvia mensual (mm) y reportes mensuales de desagüe, 2018–oct 2026",
+      "fuente": "Ayuntamiento de Mérida vía PNT + SMN/CONAGUA",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "subtema_1_precipitacion/dashboard/index.html",
+      "nota": "Sin datos de 2023; 2018–2022 y 2024–2026 vienen de entregas distintas."
+    },
+    {
+      "eq": 1,
+      "id": "D7",
+      "titulo": "El temporal del 30 de mayo al 1 de junio de 2026, día por día",
+      "tipo": "Línea",
+      "metrica": "Lluvia diaria por estación (mm) y reportes de drenaje por día",
+      "fuente": "SMN/CONAGUA + Ayuntamiento de Mérida vía PNT",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "subtema_1_precipitacion/dashboard/index.html"
+    },
+    {
+      "eq": 1,
+      "id": "D8",
+      "titulo": "Fenómenos registrados por Protección Civil (PROCIVY)",
+      "tipo": "KPI / tabla",
+      "metrica": "Fenómeno, efecto, afectaciones y personas afectadas (18 registros)",
+      "fuente": "PROCIVY vía PNT",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "subtema_1_precipitacion/dashboard/index.html",
+      "nota": "Solo oct-2024 a oct-2026."
+    },
+    {
+      "eq": 1,
+      "id": "D9",
+      "titulo": "Intensidad de la lluvia en Mérida: abril a junio de 2022",
+      "tipo": "Línea",
+      "metrica": "Lluvia cada 10 min (mm) y máximos en 10 min, 1 h y 24 h",
+      "fuente": "CONAGUA/SMN, estación ESMA «MERIDA» (PNT)",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "subtema_1_precipitacion/dashboard/index.html",
+      "nota": "Solo 3 meses de 2022; mayo no coincide con la serie diaria del SMN."
+    },
+    {
+      "eq": 1,
       "id": "V6",
       "titulo": "Línea de tiempo de eventos extraordinarios",
       "tipo": "KPI / tabla",
@@ -235,7 +282,8 @@
       "fuente": "SMN, CENAPRED",
       "estado": "texto",
       "datos": "real",
-      "ref": "subtema_1_precipitacion/scripts/fuentes.py"
+      "ref": "subtema_1_precipitacion/scripts/fuentes.py",
+      "nota": "El dashboard tiene una tabla de eventos ≥ 100 mm que la cubre en parte."
     },
     {
       "eq": 1,
@@ -254,10 +302,11 @@
       "titulo": "Intensidad de lluvia",
       "tipo": "Distribución",
       "metrica": "mm/h (histograma)",
-      "fuente": "PNT / scraping",
+      "fuente": "PNT (ESMA «MERIDA», abr–jun 2022) / scraping SIVEA",
       "estado": "texto",
-      "datos": "sin_datos",
-      "ref": "subtema_1_precipitacion/scripts/fuentes.py"
+      "datos": "real",
+      "ref": "subtema_1_precipitacion/scripts/fuentes.py",
+      "nota": "Los datos ya están en el repo (solo 3 meses de 2022), pero el histograma aún no existe."
     },
     {
       "eq": 2,
@@ -1047,8 +1096,9 @@
       "metrica": "Ancho libre (m), obstáculos, pendiente (%)",
       "fuente": "LiDAR propio",
       "estado": "texto",
-      "datos": "sin_datos",
-      "ref": "fuentes/06_lidar_banquetas/README.md"
+      "datos": "simulado",
+      "ref": "campo/06_lidar_banquetas/README.md",
+      "nota": "Hay 3 nubes .ply marcadas como SIMULADO; sin visor."
     },
     {
       "eq": 8,
@@ -1058,8 +1108,375 @@
       "metrica": "Cabe / no cabe; ancho (m)",
       "fuente": "AR propio",
       "estado": "texto",
-      "datos": "sin_datos",
-      "ref": "fuentes/07_ar_entradas/README.md"
+      "datos": "simulado",
+      "ref": "campo/07_ar_entradas/README.md",
+      "nota": "Registros simulados de 3 entradas."
+    },
+    {
+      "eq": 8,
+      "id": "S-7-M",
+      "titulo": "Modelo virtual de silla de ruedas",
+      "tipo": "3D / AR",
+      "metrica": "Volumen a escala real: 0.70 × 1.20 × 0.90 m",
+      "fuente": "Modelo propio",
+      "estado": "interactivo",
+      "datos": "fijo",
+      "ref": "campo/07_ar_entradas/modelo/silla_ruedas.glb",
+      "nota": "Herramienta para la prueba AR; no muestra resultados."
+    },
+    {
+      "eq": 8,
+      "id": "L-1",
+      "titulo": "Pasajeros transportados por mes del Tren Maya",
+      "tipo": "Línea",
+      "metrica": "Pasajeros por mes, ene 2025–sep 2026",
+      "fuente": "Tren Maya S.A. de C.V. (datos.gob.mx)",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes."
+    },
+    {
+      "eq": 8,
+      "id": "L-2",
+      "titulo": "Establecimientos por cada 1,000 habitantes por estado",
+      "tipo": "Barras",
+      "metrica": "Establecimientos por 1,000 hab., 2025",
+      "fuente": "INEGI DENUE 2025; CONAPO",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes."
+    },
+    {
+      "eq": 8,
+      "id": "L-3",
+      "titulo": "Variación de establecimientos por AGEB en Mérida",
+      "tipo": "Mapa",
+      "metrica": "Variación % de establecimientos 2019–2025",
+      "fuente": "INEGI DENUE; Censo 2020",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes."
+    },
+    {
+      "eq": 8,
+      "id": "L-4",
+      "titulo": "Distancia de restaurantes a la parada más cercana",
+      "tipo": "Distribución",
+      "metrica": "Restaurantes por distancia a parada (m)",
+      "fuente": "Sección Amarilla; GTFS Va y Ven",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes. Muestra de 193 anuncios."
+    },
+    {
+      "eq": 8,
+      "id": "L-5",
+      "titulo": "Paradas de transporte por km² por AGEB",
+      "tipo": "Mapa",
+      "metrica": "Paradas por km²",
+      "fuente": "GTFS Va y Ven; INEGI",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes."
+    },
+    {
+      "eq": 8,
+      "id": "L-6",
+      "titulo": "Instalaciones deportivas públicas por 10,000 habitantes por AGEB",
+      "tipo": "Mapa",
+      "metrica": "Instalaciones por 10,000 hab.",
+      "fuente": "OpenStreetMap; INEGI",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes. Depende de la cobertura de OSM."
+    },
+    {
+      "eq": 8,
+      "id": "L-7",
+      "titulo": "Ciclovías y carriles por AGEB",
+      "tipo": "Mapa",
+      "metrica": "km de ciclovía por AGEB",
+      "fuente": "OpenStreetMap; INEGI",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes."
+    },
+    {
+      "eq": 8,
+      "id": "L-8",
+      "titulo": "Monto aprobado por m² en obras de banquetas por año",
+      "tipo": "Barras",
+      "metrica": "MXN por m², 2022–2026 (nominales)",
+      "fuente": "SHCP, Transparencia Presupuestaria",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes. Solo obras con recursos federales."
+    },
+    {
+      "eq": 8,
+      "id": "L-9",
+      "titulo": "Necesidades expresadas en entrevistas",
+      "tipo": "Barras",
+      "metrica": "Respuestas por necesidad (18 entrevistas)",
+      "fuente": "Levantamiento de campo",
+      "estado": "texto",
+      "datos": "simulado",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes. Datos simulados."
+    },
+    {
+      "eq": 8,
+      "id": "L-10",
+      "titulo": "Ocupación de bancas por franja",
+      "tipo": "Barras",
+      "metrica": "Personas por banca y franja horaria",
+      "fuente": "Levantamiento de campo",
+      "estado": "texto",
+      "datos": "simulado",
+      "ref": "libro/graficas_e8.csv",
+      "nota": "Solo especificada en el libro del equipo, sin gráfica todavía. Título redactado a partir de sus ejes. Datos simulados."
+    },
+    {
+      "eq": 9,
+      "id": "D0",
+      "titulo": "The story in four numbers",
+      "tipo": "KPI / tabla",
+      "metrica": "Turistas, negocios del Centro, impuesto de hospedaje, precio de vivienda",
+      "fuente": "DataTur, INEGI DENUE, AAFY, SHF",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/app.py",
+      "img": "img/e9_00_portada.png",
+      "nota": "Portada del dashboard (Streamlit, local)."
+    },
+    {
+      "eq": 9,
+      "id": "D1",
+      "titulo": "Tourists staying in Mérida hotels, per year",
+      "tipo": "Barras",
+      "metrica": "Turistas de hotel nacionales y extranjeros (millones), 2015–2026",
+      "fuente": "SECTUR DataTur",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py",
+      "img": "img/e9_01_arrival.png",
+      "nota": "La imagen es la captura de la sección completa del dashboard."
+    },
+    {
+      "eq": 9,
+      "id": "C2",
+      "titulo": "Monthly arrivals by hotel category",
+      "tipo": "Línea",
+      "metrica": "Llegadas mensuales por categoría hotelera",
+      "fuente": "SECTUR DataTur",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
+    },
+    {
+      "eq": 9,
+      "id": "C1",
+      "titulo": "Change in businesses, 2019 to 2025",
+      "tipo": "Barras",
+      "metrica": "Cambio % de negocios por categoría, Centro o municipio",
+      "fuente": "INEGI DENUE",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py",
+      "img": "img/e9_02_shops.png",
+      "nota": "La imagen es la captura de la sección completa del dashboard."
+    },
+    {
+      "eq": 9,
+      "id": "C4",
+      "titulo": "Where coffee shops opened or closed",
+      "tipo": "Mapa",
+      "metrica": "Cambio en cafeterías por AGEB, 2019–2025",
+      "fuente": "INEGI DENUE, AGEB, GeoPortal Mérida",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
+    },
+    {
+      "eq": 9,
+      "id": "C5b",
+      "titulo": "New operating licenses in the Centro, per year",
+      "tipo": "Barras",
+      "metrica": "Licencias por año y giro, 2015–2026",
+      "fuente": "Ayuntamiento de Mérida (PNT)",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py",
+      "nota": "Usa solo el resumen anual, sin titulares."
+    },
+    {
+      "eq": 9,
+      "id": "C5a",
+      "titulo": "Lodging tax vs hotel tourists",
+      "tipo": "Línea",
+      "metrica": "Impuesto de hospedaje (MXN nominales) vs. turistas, índice 2019 = 100",
+      "fuente": "AAFY, DataTur",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py",
+      "img": "img/e9_03_homes.png",
+      "nota": "La imagen es la captura de la sección completa del dashboard."
+    },
+    {
+      "eq": 9,
+      "id": "C3",
+      "titulo": "Median home price / Low wages",
+      "tipo": "KPI / tabla",
+      "metrica": "Precio de vivienda vs. nacional (%), % con hasta un salario mínimo",
+      "fuente": "SHF, INEGI ENOE, Censo",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/app.py"
+    },
+    {
+      "eq": 9,
+      "id": "L-1",
+      "titulo": "Walk the low skyline of the Centro in 3D",
+      "tipo": "3D / AR",
+      "metrica": "Altura p90 por manzana (m) y cambio neto de negocios, 831 manzanas",
+      "fuente": "INEGI MDE 2015, DENUE",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py",
+      "nota": "Modelo fotogramétrico, no LiDAR."
+    },
+    {
+      "eq": 9,
+      "id": "V1",
+      "titulo": "Housing and real estate in local news",
+      "tipo": "Barras",
+      "metrica": "% de notas por año sobre vivienda, 2018–2026",
+      "fuente": "Scraping de prensa local",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py",
+      "img": "img/e9_04_voices.png",
+      "nota": "La imagen es la captura de la sección completa del dashboard."
+    },
+    {
+      "eq": 9,
+      "id": "V2",
+      "titulo": "Headlines from the corpus",
+      "tipo": "KPI / tabla",
+      "metrica": "4 titulares seleccionados",
+      "fuente": "Scraping de prensa local",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/app.py"
+    },
+    {
+      "eq": 9,
+      "id": "V3",
+      "titulo": "Most mentioned neighbourhoods",
+      "tipo": "Barras",
+      "metrica": "Notas por colonia (top 10)",
+      "fuente": "Prensa local, GeoPortal",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
+    },
+    {
+      "eq": 9,
+      "id": "V4",
+      "titulo": "What YouTube comments talk about",
+      "tipo": "Barras",
+      "metrica": "Comentarios por palabra clave (6,216)",
+      "fuente": "YouTube Data API",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
+    },
+    {
+      "eq": 9,
+      "id": "V5",
+      "titulo": "Most watched videos",
+      "tipo": "KPI / tabla",
+      "metrica": "Top 5 videos por vistas",
+      "fuente": "YouTube Data API",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/app.py"
+    },
+    {
+      "eq": 9,
+      "id": "V6",
+      "titulo": "GDELT, Sep to Nov 2026",
+      "tipo": "KPI / tabla",
+      "metrica": "655 artículos; % voz local, nacional e internacional",
+      "fuente": "GDELT DOC API",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/app.py"
+    },
+    {
+      "eq": 9,
+      "id": "E1",
+      "titulo": "Airport growth",
+      "tipo": "Barras",
+      "metrica": "Pasajeros 2025, índice 2019 = 100 (MID, CUN, OAX)",
+      "fuente": "ASUR",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py",
+      "img": "img/e9_05_elsewhere.png",
+      "nota": "La imagen es la captura de la sección completa del dashboard."
+    },
+    {
+      "eq": 9,
+      "id": "E2",
+      "titulo": "International passengers",
+      "tipo": "Barras",
+      "metrica": "% internacional, 2025",
+      "fuente": "ASUR",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
+    },
+    {
+      "eq": 9,
+      "id": "E3",
+      "titulo": "Median home price",
+      "tipo": "Barras",
+      "metrica": "Precio de vivienda vs. nacional (%), 4 estados",
+      "fuente": "SHF",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
+    },
+    {
+      "eq": 9,
+      "id": "E4",
+      "titulo": "Online interest",
+      "tipo": "Barras",
+      "metrica": "Vistas de Wikipedia 2025, índice 2019 = 100",
+      "fuente": "Wikipedia pageviews",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
+    },
+    {
+      "eq": 9,
+      "id": "E5",
+      "titulo": "Monthly passengers vs the same month of 2019",
+      "tipo": "Línea",
+      "metrica": "Pasajeros mensuales, índice 2019 = 100",
+      "fuente": "ASUR",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "dashboard/charts.py"
     },
     {
       "eq": 9,
@@ -1070,7 +1487,8 @@
       "fuente": "INEGI DENUE",
       "estado": "texto",
       "datos": "real",
-      "ref": "9-Augmented-Reality/README.md"
+      "ref": "9-Augmented-Reality/README.md",
+      "nota": "Escena AR pendiente; su versión web es L-1."
     },
     {
       "eq": 9,
@@ -1081,84 +1499,8 @@
       "fuente": "SECTUR DataTur",
       "estado": "texto",
       "datos": "real",
-      "ref": "9-Augmented-Reality/README.md"
-    },
-    {
-      "eq": 9,
-      "id": "AR3",
-      "titulo": "Crecimiento aeroportuario: Mérida vs. Cancún vs. Oaxaca",
-      "tipo": "Línea",
-      "metrica": "Pasajeros, índice 2015 = 100",
-      "fuente": "ASUR",
-      "estado": "texto",
-      "datos": "real",
-      "ref": "9-Augmented-Reality/README.md"
-    },
-    {
-      "eq": 9,
-      "id": "L-1",
-      "titulo": "Skyline colonial del Centro en 3D",
-      "tipo": "3D / AR",
-      "metrica": "Altura de edificios (m)",
-      "fuente": "INEGI LiDAR",
-      "estado": "texto",
-      "datos": "sin_datos",
-      "ref": "merida_for_sale_sources.md"
-    },
-    {
-      "eq": 9,
-      "id": "C1",
-      "titulo": "Negocios turísticos: Centro Histórico vs. municipio",
-      "tipo": "Barras",
-      "metrica": "Cambio % por categoría, 2019–2025",
-      "fuente": "INEGI DENUE",
-      "estado": "candidato",
-      "datos": "real",
-      "ref": "1-INEGI-DENUE/README.md"
-    },
-    {
-      "eq": 9,
-      "id": "C2",
-      "titulo": "Llegadas por categoría hotelera y pasajeros",
-      "tipo": "Línea",
-      "metrica": "Llegadas mensuales, % internacional",
-      "fuente": "DataTur, ASUR",
-      "estado": "candidato",
-      "datos": "real",
-      "ref": "2-Datos-Gob-Mx/README.md"
-    },
-    {
-      "eq": 9,
-      "id": "C3",
-      "titulo": "¿Los salarios siguen a los precios? Ocupación y vivienda",
-      "tipo": "Línea",
-      "metrica": "Ocupación (%), precio de vivienda (MXN)",
-      "fuente": "Sefotur, SHF, INEGI ENOE",
-      "estado": "candidato",
-      "datos": "real",
-      "ref": "3-SIEGY-Yucatan/README.md"
-    },
-    {
-      "eq": 9,
-      "id": "C4",
-      "titulo": "Capas del Centro: colonias, zonas patrimoniales y POIs",
-      "tipo": "Mapa",
-      "metrica": "Polígonos y puntos de interés",
-      "fuente": "GeoPortal Mérida, OSM, INEGI",
-      "estado": "candidato",
-      "datos": "real",
-      "ref": "4-GeoPortal-Merida/README.md"
-    },
-    {
-      "eq": 9,
-      "id": "C5",
-      "titulo": "Impuesto de hospedaje y licencias de funcionamiento",
-      "tipo": "Línea",
-      "metrica": "Recaudación (MXN/mes), licencias por año",
-      "fuente": "AAFY, Ayuntamiento (PNT)",
-      "estado": "candidato",
-      "datos": "real",
-      "ref": "5-Government-Data-Request/README.md"
+      "ref": "9-Augmented-Reality/README.md",
+      "nota": "Escena AR pendiente; su versión 2D es D1."
     }
   ]
 }
