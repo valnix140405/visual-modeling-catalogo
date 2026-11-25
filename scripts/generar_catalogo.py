@@ -21,6 +21,11 @@ DIR = RAIZ
 #   CATALOGO_URL=https://... python scripts/generar_catalogo.py --pdf
 URL_CATALOGO = os.environ.get("CATALOGO_URL", "https://valnix140405.github.io/visual-modeling-catalogo/")
 
+# Máximo de figuras por equipo en el PDF, para que ningún equipo ocupe más espacio que otro.
+# Entran, en el orden del JSON, las que tienen imagen, datos reales y no llevan "pdf": false.
+# Las demás quedan en la tabla del equipo y completas en la versión web.
+MAX_FIG_PDF = 6
+
 TIPOS = ["Barras", "Línea", "Mapa", "Heatmap", "Distribución", "Radar", "Red / flujo", "KPI / tabla", "3D / AR", "Ilustración", "Juego"]
 ESTADOS = ["imagen", "interactivo", "texto", "candidato"]
 DATOS = ["real", "fijo", "simulado", "sin_datos"]
@@ -335,7 +340,7 @@ def pagina_imprimible(cat, equipos):
     secciones = []
     for t in cat["equipos"]:
         g = [v for v in vis if v["eq"] == t["n"]]
-        figs = [v for v in g if v.get("img") and v["datos"] == "real"]
+        figs = [v for v in g if v.get("img") and v["datos"] == "real" and v.get("pdf", True)][:MAX_FIG_PDF]
         resto = [v for v in g if v not in figs]
         bloques_fig = "".join(
             f'<figure><img src="{e(v["img"])}" alt="{e(v["titulo"])}">'
@@ -442,7 +447,7 @@ figcaption{{font-size:9pt;color:#333;margin-top:1.5mm}}
   <h3>Por tipo de gráfica</h3>
   <p>{e(tipos_txt)}</p>
   <h3>Cómo leer este documento</h3>
-  <p>Cada equipo tiene su sección. Arriba van las gráficas que ya existen como imagen y usan datos reales; abajo, la tabla con el resto de sus propuestas. La columna «Datos» indica de dónde salen los números:</p>
+  <p>Cada equipo tiene su sección. Arriba van hasta {MAX_FIG_PDF} gráficas que ya existen como imagen y usan datos reales, en el mismo espacio para todos los equipos; abajo, la tabla con el resto de sus propuestas. Todas las figuras están en la versión digital. La columna «Datos» indica de dónde salen los números:</p>
   <p><span class="badge d-real">Datos del repo</span> lee un archivo del repositorio · <span class="badge d-fijo">Cifras fijas</span> números escritos a mano · <span class="badge d-simulado">Simulados</span> aleatorios o marcados como simulados · <span class="badge d-sin_datos">Sin datos</span> pendiente.</p>
 </section>
 
