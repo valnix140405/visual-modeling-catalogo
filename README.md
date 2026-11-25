@@ -50,4 +50,4 @@ Corte de la revisión: 2026-11-24.
 
 ## Publicación
 
-`.github/workflows/pages.yml` publica la raíz del repositorio en cada push a `main`. Se activa en **Settings → Pages → Source: GitHub Actions**.
+GitHub Pages publica la rama `main` (carpeta raíz) en cada push: *Settings → Pages → Deploy from a branch*. El archivo `.nojekyll` evita que GitHub procese el sitio con Jekyll.
