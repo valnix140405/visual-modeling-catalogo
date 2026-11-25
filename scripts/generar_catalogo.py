@@ -21,7 +21,7 @@ DIR = RAIZ
 #   CATALOGO_URL=https://... python scripts/generar_catalogo.py --pdf
 URL_CATALOGO = os.environ.get("CATALOGO_URL", "https://valnix140405.github.io/visual-modeling-catalogo/")
 
-TIPOS = ["Barras", "Línea", "Mapa", "Heatmap", "Distribución", "Radar", "Red / flujo", "KPI / tabla", "3D / AR"]
+TIPOS = ["Barras", "Línea", "Mapa", "Heatmap", "Distribución", "Radar", "Red / flujo", "KPI / tabla", "3D / AR", "Ilustración", "Juego"]
 ESTADOS = ["imagen", "interactivo", "texto", "candidato"]
 DATOS = ["real", "fijo", "simulado", "sin_datos"]
 ETQ_ESTADO = {"imagen": "Imagen", "interactivo": "Interactiva", "texto": "Solo texto", "candidato": "Candidato"}
