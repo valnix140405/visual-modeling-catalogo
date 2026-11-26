@@ -318,7 +318,8 @@
       "estado": "imagen",
       "datos": "real",
       "img": "img/e2_precios_canasta_por_cadena_profeco.png",
-      "ref": "reports/figuras/01_precios_canasta_por_cadena_profeco.png"
+      "ref": "reports/figuras/01_precios_canasta_por_cadena_profeco.png",
+      "pdf": false
     },
     {
       "eq": 2,
@@ -330,7 +331,8 @@
       "estado": "imagen",
       "datos": "real",
       "img": "img/e2_central_abasto_vs_supermercados_profeco.png",
-      "ref": "reports/figuras/02_central_abasto_vs_supermercados_profeco.png"
+      "ref": "reports/figuras/02_central_abasto_vs_supermercados_profeco.png",
+      "pdf": false
     },
     {
       "eq": 2,
@@ -342,7 +344,8 @@
       "estado": "imagen",
       "datos": "real",
       "img": "img/e2_lineas_pobreza_coneval_2018_2025.png",
-      "ref": "reports/figuras/03_lineas_pobreza_coneval_2018_2025.png"
+      "ref": "reports/figuras/03_lineas_pobreza_coneval_2018_2025.png",
+      "pdf": false
     },
     {
       "eq": 2,
@@ -354,7 +357,8 @@
       "estado": "imagen",
       "datos": "real",
       "img": "img/e2_tienditas_vs_supermercados.png",
-      "ref": "reports/figuras/04_tienditas_vs_supermercados.png"
+      "ref": "reports/figuras/04_tienditas_vs_supermercados.png",
+      "pdf": false
     },
     {
       "eq": 2,
@@ -366,7 +370,8 @@
       "estado": "imagen",
       "datos": "real",
       "img": "img/e2_indicadores_ageb_censo2020_merida.png",
-      "ref": "reports/figuras/05_indicadores_ageb_censo2020_merida.png"
+      "ref": "reports/figuras/05_indicadores_ageb_censo2020_merida.png",
+      "pdf": false
     },
     {
       "eq": 2,
@@ -378,7 +383,8 @@
       "estado": "imagen",
       "datos": "real",
       "img": "img/e2_relieve_merida_vs_ciudades_montana.png",
-      "ref": "reports/figuras/06_relieve_merida_vs_ciudades_montana.png"
+      "ref": "reports/figuras/06_relieve_merida_vs_ciudades_montana.png",
+      "pdf": false
     },
     {
       "eq": 2,
