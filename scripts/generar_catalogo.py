@@ -466,7 +466,7 @@ figcaption{{font-size:9pt;color:#333;margin-top:1.5mm}}
     <li>Revisar la legibilidad a tamaño real impreso.</li>
     <li>Confirmar que se autoriza el QR al producto digital.</li>
   </ul>
-  <p class="supuesto"><b>Supuestos de este borrador:</b> tamaño carta vertical; el QR apunta a {e(URL_CATALOGO)}, que solo funciona cuando este cambio se publique en la rama <code>main</code>; la fecha de corte es el día en que se revisaron los repositorios, no la fecha de los datos de cada gráfica.</p>
+  <p class="supuesto"><b>Supuestos de este borrador:</b> tamaño carta vertical; el QR apunta a {e(URL_CATALOGO)} (la versión publicada de este repositorio); la fecha de corte es el día en que se revisaron los repositorios, no la fecha de los datos de cada gráfica.</p>
 </section>
 
 </div>
