@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo": "Catálogo de visualizaciones de los 9 equipos",
-    "fecha_corte": "2026-11-25",
+    "fecha_corte": "2026-11-26",
     "responsable": "Data Visualization Team",
     "metodo": "Se clonó el repositorio de cada equipo en la fecha de corte y se registraron las gráficas, mapas y escenas 3D/AR que proponen: imágenes generadas, código de gráficas o gráficas descritas en sus README. Para cada una se revisó si los datos salen de un archivo del repositorio o si están escritos en el código, simulados o pendientes.",
     "estados": {
@@ -45,7 +45,7 @@
       "integrantes": "Russel, Daniel, Alejandra",
       "repo": "https://github.com/RusselKu/Mexico-DataViz-by-UPY",
       "sitio": "https://russelku.github.io/Mexico-DataViz-by-UPY/",
-      "commit": "1a546bd · 2026-10-07",
+      "commit": "28bf5fd · 2026-11-25",
       "captura": "img/e3_sitio.png"
     },
     {
@@ -55,7 +55,7 @@
       "integrantes": "Rivaldo, Elisabet, Christopher",
       "repo": "https://github.com/Rivaldo2309030/Visual-Modeling-For-Information",
       "sitio": "https://rivaldo2309030.github.io/Visual-Modeling-For-Information/",
-      "commit": "59902e9 · 2026-10-19",
+      "commit": "7c2e966 · 2026-11-25",
       "captura": "img/e4_sitio.png"
     },
     {
@@ -65,7 +65,7 @@
       "integrantes": "Lorena, Iván, Karen",
       "repo": "https://github.com/ldpl3012/percepcion-inseguridad-yucatan",
       "sitio": null,
-      "commit": "78699f0 · 2026-11-17",
+      "commit": "d04b427 · 2026-11-25",
       "captura": null
     },
     {
@@ -546,7 +546,8 @@
       "fuente": "INEGI DENUE + Censo 2020",
       "estado": "interactivo",
       "datos": "fijo",
-      "ref": "js/data/viewsData.js"
+      "ref": "js/data/viewsData.js",
+      "nota": "Ya hay tabla real en data/silver/unidades_medicas_yucatan (OpenStreetMap). El sitio aún no la lee: las cifras siguen escritas en viewsData.js."
     },
     {
       "eq": 3,
@@ -557,7 +558,8 @@
       "fuente": "datos.gob.mx (DGE)",
       "estado": "interactivo",
       "datos": "fijo",
-      "ref": "js/data/viewsData.js"
+      "ref": "js/data/viewsData.js",
+      "nota": "Ya hay serie real en data/silver/serie_epidemiologica_yucatan (DGE vía un repositorio de terceros). El sitio aún no la lee: las cifras siguen escritas en viewsData.js."
     },
     {
       "eq": 3,
@@ -579,7 +581,8 @@
       "fuente": "SIEGY",
       "estado": "interactivo",
       "datos": "fijo",
-      "ref": "js/data/viewsData.js"
+      "ref": "js/data/viewsData.js",
+      "nota": "Ya hay base real de municipios en data/silver/dim_municipios_yucatan. El sitio aún no la lee: las cifras siguen escritas en viewsData.js."
     },
     {
       "eq": 3,
@@ -601,7 +604,8 @@
       "fuente": "GeoPortal Mérida",
       "estado": "interactivo",
       "datos": "fijo",
-      "ref": "js/data/viewsData.js"
+      "ref": "js/data/viewsData.js",
+      "nota": "Ya hay tablas reales de comisarías y parques en data/silver/ (OpenStreetMap). El sitio aún no la lee: las cifras siguen escritas en viewsData.js."
     },
     {
       "eq": 3,
@@ -634,7 +638,8 @@
       "fuente": "Scraping de prensa local",
       "estado": "interactivo",
       "datos": "fijo",
-      "ref": "js/modules/forceGraph.js"
+      "ref": "js/modules/forceGraph.js",
+      "nota": "Ya hay corpus real en data/silver/corpus_prensa_yucatan y data/gold/mart_sentimiento_prensa_yucatan. El sitio aún no la lee: las cifras siguen escritas en viewsData.js."
     },
     {
       "eq": 3,
@@ -644,8 +649,9 @@
       "metrica": "% de acuerdo",
       "fuente": "Encuesta UPY",
       "estado": "interactivo",
-      "datos": "simulado",
-      "ref": "js/data/viewsData.js"
+      "datos": "fijo",
+      "ref": "js/data/viewsData.js",
+      "nota": "La encuesta trae 165 respuestas de Google Sheets, pero en el repo sigue el bot que llena el formulario al azar (scripts/survey_bot/google_forms_filler.py). La gráfica no lee esos datos."
     },
     {
       "eq": 3,
@@ -667,7 +673,8 @@
       "fuente": "INEGI CEM + LiDAR",
       "estado": "interactivo",
       "datos": "simulado",
-      "ref": "js/modules/threeVisuals.js"
+      "ref": "js/modules/threeVisuals.js",
+      "nota": "Ya hay elevación real en data/silver/dem_altimetria_merida (Open-Meteo), pero el visor sigue usando Math.random."
     },
     {
       "eq": 3,
@@ -683,26 +690,110 @@
     {
       "eq": 4,
       "id": "1",
-      "titulo": "Clusters de siniestralidad y exposición comercial",
+      "titulo": "Explorador cartográfico de 8,815 siniestros ATUS y densidad comercial por AGEB",
       "tipo": "Mapa",
-      "metrica": "Siniestros y comercios",
+      "metrica": "Siniestros y comercios por AGEB",
       "fuente": "INEGI ATUS + DENUE",
       "estado": "interactivo",
       "datos": "fijo",
       "ref": "js/modules/gisMap.js",
-      "nota": "El mapa todavía muestra los nodos de salud de la plantilla del equipo 3."
+      "nota": "El mapa sigue siendo el SVG de salud del Equipo 3 («Mérida (2,150 un.)»). Datos reales en data/ y datamart/; las cifras se copiaron a mano en viewsData.js."
     },
     {
       "eq": 4,
       "id": "2",
-      "titulo": "Curva de siniestralidad vial peatonal",
+      "titulo": "Evolución del TDPA promedio 2013–2024: corredores de Mérida vs. resto de Yucatán",
       "tipo": "Línea",
-      "metrica": "Índice de siniestralidad, nacional vs. Yucatán",
-      "fuente": "datos.gob.mx SICT/IMT",
+      "metrica": "Tránsito diario promedio anual (vehículos)",
+      "fuente": "SICT, datos viales",
+      "estado": "interactivo",
+      "datos": "fijo",
+      "ref": "js/data/viewsData.js",
+      "nota": "Datos reales en data/ y datamart/; las cifras se copiaron a mano en viewsData.js. El botón «Actualizar» altera los valores al azar (charts.js:74)."
+    },
+    {
+      "eq": 4,
+      "id": "3",
+      "titulo": "Cobertura y red espacial de 547 paraderos en Mérida",
+      "tipo": "Radar",
+      "metrica": "Cobertura por corredor (puntaje)",
+      "fuente": "ATY, red Va y Ven",
+      "estado": "interactivo",
+      "datos": "fijo",
+      "ref": "js/data/viewsData.js",
+      "nota": "Datos reales en data/ y datamart/; las cifras se copiaron a mano en viewsData.js. El botón «Actualizar» altera los valores al azar (charts.js:74)."
+    },
+    {
+      "eq": 4,
+      "id": "4",
+      "titulo": "Mapa de 190 semáforos reales y colonias de Mérida",
+      "tipo": "Mapa",
+      "metrica": "Ubicación de semáforos",
+      "fuente": "OpenStreetMap",
+      "estado": "texto",
+      "datos": "real",
+      "ref": "data/silver/semaforos_osm_merida.geojson",
+      "nota": "Los 190 semáforos están en data/silver/, pero el sitio no los dibuja."
+    },
+    {
+      "eq": 4,
+      "id": "5",
+      "titulo": "Inventario de equipamiento peatonal y capas municipales de infraestructura",
+      "tipo": "Barras",
+      "metrica": "Unidades de alumbrado, bancas y refugios",
+      "fuente": "Ayuntamiento de Mérida, transparencia",
+      "estado": "interactivo",
+      "datos": "fijo",
+      "ref": "js/data/viewsData.js",
+      "nota": "Datos reales en data/ y datamart/; las cifras se copiaron a mano en viewsData.js. El botón «Actualizar» altera los valores al azar (charts.js:74)."
+    },
+    {
+      "eq": 4,
+      "id": "6",
+      "titulo": "Red semántica de tópicos en 338 notas de prensa local",
+      "tipo": "Red / flujo",
+      "metrica": "Co-ocurrencia de tópicos",
+      "fuente": "Prensa local",
+      "estado": "interactivo",
+      "datos": "fijo",
+      "ref": "js/modules/forceGraph.js",
+      "nota": "Posiciones con Math.random (forceGraph.js:87). Datos reales en data/ y datamart/; las cifras se copiaron a mano en viewsData.js."
+    },
+    {
+      "eq": 4,
+      "id": "7",
+      "titulo": "Distribución de 697.6 km de red peatonal y 4,092 cruces peatonales",
+      "tipo": "Barras",
+      "metrica": "km de red peatonal, cruces",
+      "fuente": "OpenStreetMap",
+      "estado": "interactivo",
+      "datos": "fijo",
+      "ref": "js/data/viewsData.js",
+      "nota": "Datos reales en data/ y datamart/; las cifras se copiaron a mano en viewsData.js. El botón «Actualizar» altera los valores al azar (charts.js:74)."
+    },
+    {
+      "eq": 4,
+      "id": "8",
+      "titulo": "Visor 3D de terreno real (11,554 puntos INEGI 1.5 m) y pendientes por AGEB",
+      "tipo": "3D / AR",
+      "metrica": "Elevación (m), pendiente",
+      "fuente": "INEGI, modelo digital de terreno 1.5 m",
       "estado": "interactivo",
       "datos": "simulado",
-      "ref": "js/modules/charts.js",
-      "nota": "El botón «Actualizar» multiplica los valores por un factor aleatorio."
+      "ref": "js/modules/threeVisuals.js",
+      "nota": "El .ply real está en data/08_lidar_3d/, pero el visor no lo carga: genera la geometría con Math.random."
+    },
+    {
+      "eq": 4,
+      "id": "9",
+      "titulo": "Maqueta 3D del Centro Histórico (GLB / CityJSON para WebXR)",
+      "tipo": "3D / AR",
+      "metrica": "Volumen de edificios",
+      "fuente": "Modelo LOD1 del Centro",
+      "estado": "interactivo",
+      "datos": "simulado",
+      "ref": "js/modules/threeVisuals.js",
+      "nota": "El .glb real está en data/09_realidad_aumentada_ar/, pero el visor no lo carga: genera la geometría con Math.random."
     },
     {
       "eq": 4,
@@ -717,50 +808,6 @@
     },
     {
       "eq": 4,
-      "id": "3",
-      "titulo": "Radar de servicios en corredores Va y Ven",
-      "tipo": "Radar",
-      "metrica": "Puntaje 0–100, 5 ejes",
-      "fuente": "SIEGY + ATY",
-      "estado": "interactivo",
-      "datos": "simulado",
-      "ref": "js/data/viewsData.js"
-    },
-    {
-      "eq": 4,
-      "id": "3b",
-      "titulo": "Paraderos y tiempos de espera",
-      "tipo": "Mapa",
-      "metrica": "Metros / minutos a pie",
-      "fuente": "ATY",
-      "estado": "texto",
-      "datos": "sin_datos",
-      "ref": "FUENTES_Y_PLAN_DE_ANALISIS.md"
-    },
-    {
-      "eq": 4,
-      "id": "4",
-      "titulo": "80 cruces semaforizados de Mérida",
-      "tipo": "Mapa",
-      "metrica": "Tiempo de verde (s), rampas",
-      "fuente": "GeoPortal + OSM",
-      "estado": "texto",
-      "datos": "sin_datos",
-      "ref": "js/data/viewsData.js"
-    },
-    {
-      "eq": 4,
-      "id": "5",
-      "titulo": "Solicitudes PNT e infraestructura C5i",
-      "tipo": "Barras",
-      "metrica": "Peticiones por tipo",
-      "fuente": "PNT / SSP / C5i",
-      "estado": "interactivo",
-      "datos": "fijo",
-      "ref": "js/data/viewsData.js"
-    },
-    {
-      "eq": 4,
       "id": "5b",
       "titulo": "Raincloud de tiempos de atención",
       "tipo": "Distribución",
@@ -769,29 +816,6 @@
       "estado": "texto",
       "datos": "sin_datos",
       "ref": "FUENTES_Y_PLAN_DE_ANALISIS.md"
-    },
-    {
-      "eq": 4,
-      "id": "6",
-      "titulo": "Red de co-ocurrencia de términos periodísticos",
-      "tipo": "Red / flujo",
-      "metrica": "Co-ocurrencia de términos",
-      "fuente": "Diario de Yucatán / Por Esto!",
-      "estado": "interactivo",
-      "datos": "simulado",
-      "ref": "js/modules/forceGraph.js",
-      "nota": "Los nodos son de COVID, de la plantilla del equipo 3."
-    },
-    {
-      "eq": 4,
-      "id": "7",
-      "titulo": "Huella peatonal: ancho libre de banqueta vs. umbral 1.20 m",
-      "tipo": "Barras",
-      "metrica": "Ancho libre (m)",
-      "fuente": "Auditoría de campo UPY",
-      "estado": "interactivo",
-      "datos": "simulado",
-      "ref": "js/data/viewsData.js"
     },
     {
       "eq": 4,
@@ -805,26 +829,96 @@
       "ref": "FUENTES_Y_PLAN_DE_ANALISIS.md"
     },
     {
-      "eq": 4,
-      "id": "8",
-      "titulo": "Visor 3D de nube de puntos y ángulos ciegos",
-      "tipo": "3D / AR",
-      "metrica": "Altura (unidades arbitrarias)",
-      "fuente": "INEGI CEM + LiDAR de aula",
+      "eq": 5,
+      "id": "D1",
+      "titulo": "Incidencia mensual registrada",
+      "tipo": "Línea",
+      "metrica": "Delitos registrados por mes (conteo)",
+      "fuente": "SESNSP vía datos.gob.mx",
       "estado": "interactivo",
-      "datos": "simulado",
-      "ref": "js/modules/threeVisuals.js"
+      "datos": "real",
+      "ref": "js/app.js",
+      "nota": "Es de todo Yucatán: datos.gob.mx solo trae la clave estatal."
     },
     {
-      "eq": 4,
-      "id": "9",
-      "titulo": "Holograma 3D de rediseño urbano en AR",
-      "tipo": "3D / AR",
-      "metrica": "Sin métrica",
-      "fuente": "WebXR",
+      "eq": 5,
+      "id": "D2",
+      "titulo": "Variación mensual de la incidencia",
+      "tipo": "Línea",
+      "metrica": "Delitos por mes y año (conteo)",
+      "fuente": "SESNSP vía datos.gob.mx",
       "estado": "interactivo",
-      "datos": "simulado",
-      "ref": "js/modules/threeVisuals.js"
+      "datos": "real",
+      "ref": "js/app.js",
+      "nota": "Es de todo Yucatán."
+    },
+    {
+      "eq": 5,
+      "id": "D3",
+      "titulo": "Tipos de delito",
+      "tipo": "Barras",
+      "metrica": "Delitos registrados por tipo (conteo)",
+      "fuente": "SESNSP vía datos.gob.mx",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "js/app.js"
+    },
+    {
+      "eq": 5,
+      "id": "D4",
+      "titulo": "Percepción de inseguridad en Mérida",
+      "tipo": "Barras",
+      "metrica": "% de población que se siente insegura, por año",
+      "fuente": "INEGI ENSU",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "js/app.js"
+    },
+    {
+      "eq": 5,
+      "id": "D5",
+      "titulo": "Mapa de códigos postales y límite municipal de Mérida",
+      "tipo": "Mapa",
+      "metrica": "Polígonos de códigos postales",
+      "fuente": "INEGI y catálogo de códigos postales",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "js/app.js",
+      "nota": "Hecho en Leaflet; pasa a D3."
+    },
+    {
+      "eq": 5,
+      "id": "D6",
+      "titulo": "Relieve y seguridad",
+      "tipo": "3D / AR",
+      "metrica": "Elevación (m)",
+      "fuente": "INEGI, Continuo de Elevaciones",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "js/app.js",
+      "nota": "Lee data/silver/lidar/merida_elevacion.tif; es modelo de elevación, no LiDAR."
+    },
+    {
+      "eq": 5,
+      "id": "D7",
+      "titulo": "Artículos de prensa por mes",
+      "tipo": "Barras",
+      "metrica": "Notas por mes (conteo)",
+      "fuente": "Scraping de prensa local",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "js/app.js"
+    },
+    {
+      "eq": 5,
+      "id": "D8",
+      "titulo": "Palabras en titulares",
+      "tipo": "Barras",
+      "metrica": "Frecuencia de términos en titulares",
+      "fuente": "Scraping de prensa local",
+      "estado": "interactivo",
+      "datos": "real",
+      "ref": "js/app.js"
     },
     {
       "eq": 5,
@@ -848,50 +942,6 @@
       "datos": "sin_datos",
       "ref": "percepcion_inseguridad_yucatan/09_ar_realidad_aumentada/README.md",
       "nota": "El KML solo enlaza a Google My Maps; no trae coordenadas."
-    },
-    {
-      "eq": 5,
-      "id": "E5-3",
-      "titulo": "Entorno 3D con elevación, parques y servicios",
-      "tipo": "3D / AR",
-      "metrica": "Elevación (m)",
-      "fuente": "INEGI CEM 4.0 + Geoportal",
-      "estado": "texto",
-      "datos": "real",
-      "ref": "percepcion_inseguridad_yucatan/09_ar_realidad_aumentada/README.md"
-    },
-    {
-      "eq": 5,
-      "id": "E5-4",
-      "titulo": "Percepción de inseguridad y victimización",
-      "tipo": "Barras",
-      "metrica": "% de población que se siente insegura",
-      "fuente": "INEGI ENSU / ENVIPE",
-      "estado": "candidato",
-      "datos": "real",
-      "ref": "percepcion_inseguridad_yucatan/01_inegi_ensu/README.md"
-    },
-    {
-      "eq": 5,
-      "id": "E5-5",
-      "titulo": "Evolución mensual del delito registrado",
-      "tipo": "Línea",
-      "metrica": "Delitos por tipo, municipio y mes",
-      "fuente": "SESNSP vía datos.gob.mx",
-      "estado": "candidato",
-      "datos": "real",
-      "ref": "percepcion_inseguridad_yucatan/02_datos_gob_mx/README.md"
-    },
-    {
-      "eq": 5,
-      "id": "E5-6",
-      "titulo": "Lugares mencionados en noticias",
-      "tipo": "Mapa",
-      "metrica": "Menciones por lugar",
-      "fuente": "Diario de Yucatán, TV Azteca",
-      "estado": "candidato",
-      "datos": "sin_datos",
-      "ref": "percepcion_inseguridad_yucatan/06_scraping_noticias/README.md"
     },
     {
       "eq": 6,
